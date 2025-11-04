@@ -1,23 +1,43 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Navbar } from "@/components/navbar"
 import { blogPosts } from "@/lib/blog-data"
 import { Edit, Trash2, Plus, Eye } from "lucide-react"
 import AdminGuard from "@/components/AdminGuard" // ✅ استدعاء AdminGuard
 
+interface Visit {
+  id: number
+  path: string
+  date: string
+}
+
 export default function AdminDashboard() {
   const [posts, setPosts] = useState(blogPosts)
   const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null)
+  const [visits, setVisits] = useState<Visit[]>([])
 
   const handleDelete = (id: string) => {
     setPosts(posts.filter((p) => p.id !== id))
     setDeleteConfirm(null)
   }
 
+  useEffect(() => {
+    // تسجيل كل زيارة في LocalStorage
+    const stored = JSON.parse(localStorage.getItem("visits") || "[]")
+    const newVisit: Visit = {
+      id: stored.length + 1,
+      path: "/admin",
+      date: new Date().toLocaleString(),
+    }
+    const updated = [...stored, newVisit]
+    localStorage.setItem("visits", JSON.stringify(updated))
+    setVisits(updated)
+  }, [])
+
   return (
-    <AdminGuard> {/* ✅ غلاف الصفحة بـ AdminGuard */}
+    <AdminGuard>
       <div className="min-h-screen bg-background">
         <Navbar />
 
@@ -27,6 +47,7 @@ export default function AdminDashboard() {
             <div>
               <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">Admin Dashboard</h1>
               <p className="text-foreground/60">Manage your blog posts</p>
+              <p className="text-foreground/70 text-sm mt-1">Total Visits Recorded: {visits.length}</p>
             </div>
             <Link
               href="/admin/posts/new"

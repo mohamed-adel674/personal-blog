@@ -144,7 +144,7 @@ export default function Home() {
             <div className="transition-smooth">
               <h3 className="font-semibold text-foreground mb-4">Categories</h3>
               <ul className="space-y-2 text-sm">
-                {categories.slice(0, 3).map((category) => (
+                {categories.slice(0, 5).map((category) => (
                   <li key={category}>
                     <button
                       onClick={() => setSelectedCategory(category)}

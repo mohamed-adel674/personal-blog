@@ -17,30 +17,29 @@ export default function About() {
 
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6">
           <p className="text-lg text-foreground/80 leading-relaxed">
-            I'm a developer passionate about crafting beautiful, accessible web experiences. With expertise in modern
-            web technologies, I believe in the intersection of design and engineering.
+            I'm a PHP and Laravel developer passionate about building robust
+            and efficient web applications. I enjoy blending programming with design to create smooth, user-friendly experiences.
           </p>
 
           <h2 className="text-2xl font-semibold text-foreground">Background</h2>
           <p className="text-foreground/80 leading-relaxed">
-            I've spent the last several years building digital products, from startups to established companies. My
-            journey started with a curiosity about how things work, and evolved into a passion for creating
-            pixel-perfect, performant web applications.
-          </p>
+            Over the past few years, I've worked on a variety of projects, from startup applications to full-fledged
+            systems for larger companies. My journey began with curiosity
+            about how things work and evolved into a passion for crafting high-performance, maintainable web applications.          </p>
 
           <h2 className="text-2xl font-semibold text-foreground">Skills & Expertise</h2>
           <ul className="space-y-2 text-foreground/80">
-            <li>Modern JavaScript & TypeScript</li>
-            <li>React and Next.js</li>
+            <li>PHP & Laravel</li>
+            <li>HTML, CSS, JavaScript</li>
             <li>Responsive Design & UI/UX</li>
-            <li>Performance Optimization</li>
-            <li>Web Accessibility (a11y)</li>
+            <li>Performance Optimization & Security</li>
+            <li>Best Practices in Web Development</li>
           </ul>
 
           <h2 className="text-2xl font-semibold text-foreground">Let's Connect</h2>
           <p className="text-foreground/80 leading-relaxed">
-            I'm always interested in discussing web development, design, and technology. Feel free to reach out via
-            email or social media.
+           I'm always open to discussing web development, new projects,
+            or exchanging technical ideas. You can reach
           </p>
 
           <div className="pt-8">
