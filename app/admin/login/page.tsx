@@ -6,8 +6,8 @@ import Link from "next/link"
 import { Eye, EyeOff } from "lucide-react"
 
 const ADMIN_CREDENTIALS = {
-  email: "madelelmorshdy@gmail.com",
-  password: "34299100@adel",
+  email: "email@example.com",
+  password: "123456",
 }
 
 export default function AdminLogin() {
@@ -135,7 +135,7 @@ export default function AdminLogin() {
         {/* Credentials Help Text */}
         <div className="mt-8 text-center text-xs text-slate-600 bg-white/50 rounded-lg p-4 backdrop-blur-sm">
           <p className="font-medium mb-1">Demo Credentials:</p>
-          <p>Email: madelelmorshdy@gmail.com | Password: 34299100@adel</p>
+          <p>Email: email@example.com | Password: 123456</p>
         </div>
       </div>
     </div>
