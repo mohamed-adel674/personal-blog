@@ -1,11 +1,14 @@
 "use client"
 
-import type React from "react"
-
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { Eye, EyeOff } from "lucide-react"
+
+const ADMIN_CREDENTIALS = {
+  email: "madelelmorshdy@gmail.com",
+  password: "34299100@adel",
+}
 
 export default function AdminLogin() {
   const router = useRouter()
@@ -20,18 +23,15 @@ export default function AdminLogin() {
     setError("")
     setIsLoading(true)
 
-    // Simulate authentication
+    // Simulate authentication delay
     await new Promise((resolve) => setTimeout(resolve, 500))
 
-    if (email && password) {
-      // Store auth token in localStorage
+    if (email === ADMIN_CREDENTIALS.email && password === ADMIN_CREDENTIALS.password) {
       localStorage.setItem("adminToken", "authenticated")
       localStorage.setItem("adminEmail", email)
-
-      console.log("[v0] Admin logged in:", email)
-      router.push("/admin")
+      router.push("/admin") // يروح للوحة التحكم
     } else {
-      setError("Please enter both email and password")
+      setError("Invalid email or password")
     }
 
     setIsLoading(false)
@@ -67,7 +67,7 @@ export default function AdminLogin() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@example.com"
+                placeholder="admin@example.com"
                 className="w-full px-4 py-2.5 rounded-md border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-0 transition-all"
                 required
               />
@@ -84,7 +84,7 @@ export default function AdminLogin() {
                   type={showPassword ? "text" : "password"}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Enter your password"
+                  placeholder="123456"
                   className="w-full px-4 py-2.5 rounded-md border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-0 transition-all pr-10"
                   required
                 />
@@ -135,7 +135,7 @@ export default function AdminLogin() {
         {/* Credentials Help Text */}
         <div className="mt-8 text-center text-xs text-slate-600 bg-white/50 rounded-lg p-4 backdrop-blur-sm">
           <p className="font-medium mb-1">Demo Credentials:</p>
-          <p>Use any email and password to test the login</p>
+          <p>Email: madelelmorshdy@gmail.com | Password: 34299100@adel</p>
         </div>
       </div>
     </div>

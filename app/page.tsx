@@ -59,11 +59,10 @@ export default function Home() {
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setSelectedCategory(null)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                selectedCategory === null
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${selectedCategory === null
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary text-foreground hover:bg-secondary/80"
-              }`}
+                }`}
             >
               All Posts
             </button>
@@ -71,11 +70,10 @@ export default function Home() {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  selectedCategory === category
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${selectedCategory === category
                     ? "bg-primary text-primary-foreground"
                     : "bg-secondary text-foreground hover:bg-secondary/80"
-                }`}
+                  }`}
               >
                 {category}
               </button>
@@ -122,18 +120,23 @@ export default function Home() {
               <h3 className="font-semibold text-foreground mb-4">Links</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#" className="text-foreground/60 hover:text-primary transition-smooth">
+                  <a href="https://github.com/mohamed-adel674" className="text-foreground/60 hover:text-primary transition-smooth">
                     GitHub
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-foreground/60 hover:text-primary transition-smooth">
-                    Twitter
+                  <a href="http://linkedin.com/in/mohamed-adel674" className="text-foreground/60 hover:text-primary transition-smooth">
+                    LinkedIn
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-foreground/60 hover:text-primary transition-smooth">
-                    LinkedIn
+                  <a href="https://web.facebook.com/mohamed.morshdy.14" className="text-foreground/60 hover:text-primary transition-smooth">
+                    Facebook
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/__mohamed.adel__" className="text-foreground/60 hover:text-primary transition-smooth">
+                    Instagram
                   </a>
                 </li>
               </ul>

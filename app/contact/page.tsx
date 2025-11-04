@@ -29,18 +29,23 @@ export default function Contact() {
               <h3 className="font-semibold text-foreground mb-2">Social</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
+                  <a href="https://github.com/mohamed-adel674" className="text-foreground/60 hover:text-primary transition-colors">
                     GitHub →
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
-                    Twitter →
+                  <a href="http://linkedin.com/in/mohamed-adel674" className="text-foreground/60 hover:text-primary transition-smooth">
+                    LinkedIn
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
-                    LinkedIn →
+                  <a href="https://web.facebook.com/mohamed.morshdy.14" className="text-foreground/60 hover:text-primary transition-colors">
+                    Facebook →
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/__mohamed.adel__" className="text-foreground/60 hover:text-primary transition-colors">
+                    Instagram →
                   </a>
                 </li>
               </ul>
